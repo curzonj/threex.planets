@@ -1,3 +1,5 @@
+var THREE = require('three');
+
 var THREEx = THREEx || {}
 
 THREEx.Planets	= {}
@@ -369,31 +371,23 @@ THREEx.Planets._RingGeometry = function ( innerRadius, outerRadius, thetaSegment
 		var vertexIdx	= i * 4;
 
 		// Create the first triangle
-		var face = new THREE.Face3(vertexIdx + 0, vertexIdx + 1, vertexIdx + 2, normal);
 		var uvs = []
 
-		var uv = new THREE.Vector2(0, 0)
-		uvs.push(uv)
-		var uv = new THREE.Vector2(1, 0)
-		uvs.push(uv)
-		var uv = new THREE.Vector2(0, 1)
-		uvs.push(uv)
+		uvs.push(new THREE.Vector2(0, 0))
+		uvs.push(new THREE.Vector2(1, 0))
+		uvs.push(new THREE.Vector2(0, 1))
 
-		this.faces.push(face);
+		this.faces.push(new THREE.Face3(vertexIdx + 0, vertexIdx + 1, vertexIdx + 2, normal));
 		this.faceVertexUvs[0].push(uvs);
 
 		// Create the second triangle
-		var face = new THREE.Face3(vertexIdx + 2, vertexIdx + 1, vertexIdx + 3, normal);
-		var uvs = []
+		uvs = []
 
-		var uv = new THREE.Vector2(0, 1)
-		uvs.push(uv)
-		var uv = new THREE.Vector2(1, 0)
-		uvs.push(uv)
-		var uv = new THREE.Vector2(1, 1)
-		uvs.push(uv)
+		uvs.push(new THREE.Vector2(0, 1))
+		uvs.push(new THREE.Vector2(1, 0))
+		uvs.push(new THREE.Vector2(1, 1))
 
-		this.faces.push(face);
+		this.faces.push(new THREE.Face3(vertexIdx + 2, vertexIdx + 1, vertexIdx + 3, normal));
 		this.faceVertexUvs[0].push(uvs);
 	}
 
@@ -405,4 +399,4 @@ THREEx.Planets._RingGeometry = function ( innerRadius, outerRadius, thetaSegment
 };
 THREEx.Planets._RingGeometry.prototype = Object.create( THREE.Geometry.prototype );
 
-
+module.exports = THREEx.Planets;

@@ -1,0 +1,23 @@
+{
+  "name": "threex.planets",
+  "version": "0.0.0",
+  "description": "threex.planets ============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curzonj/threex.planets.git"
+  },
+  "author": "",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/curzonj/threex.planets/issues"
+  },
+  "homepage": "https://github.com/curzonj/threex.planets",
+  "jshintConfig": {
+    "browserify": true,
+    "asi": true
+  }
+}
