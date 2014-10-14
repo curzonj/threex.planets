@@ -1,4 +1,4 @@
-var THREE = require('three');
+var THREE = (window !== undefined ? window.THREE : THREE);
 
 var THREEx = THREEx || {}
 
